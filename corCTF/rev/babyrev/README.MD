@@ -27,7 +27,7 @@ After that, we do exactly the same thing as they did while encrypting - find the
     while(counter-->=0) {
         int rot_number = counter*4;
         while(!is_prime(rot_number))rot_number+=1;
-        check[counter] = rot_n((char)check[counter], 26-(rot_number%26));
+        check[counter] = rot_n((char)check[counter], 26-( rot_number % 26 ));
     }
 All we need to do now is to print `check` together with excluded first 7 characters - `corctf{` and `}`. 
 
