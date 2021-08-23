@@ -17,11 +17,11 @@ If we move Alice to the first question mark, we are starting the first challenge
     string str = WhiteRabbit.Transform("41!ce1337");
     char[] array = WhiteRabbit.Transform(this.textBox1.Text).Reverse<char>().ToArray<char>();
     for (int index = 0; index < array.Length; ++index)
-			array[index] ^= str[index % str.Length];
-		    if (!string.Join<char>("", ((IEnumerable<char>) array).Reverse<char>()).Equals("oI!&}IusoKs ?Ytr"))
-                return;
+	array[index] ^= str[index % str.Length];
+	if (!string.Join<char>("", ((IEnumerable<char>) array).Reverse<char>()).Equals("oI!&}IusoKs ?Ytr"))
+            return;
 
-We see here that after our input is XOR-ed with `str`, it needs to be equal to `oI!&}IusoKs ?Ytr`. So let's do some rev here, and write reversed function in C# :
+We see here that after our input is XOR-ed with `str`, it needs to be equal to `oI!&}IusoKs ?Ytr`. The WhiteRabbit.Transform(string) just returns string that is passed as argument. So let's do some rev here, and write reversed function in C# :
 
     string str = "41!ce1337";
     char[] array = ("oI!&}IusoKs ?Ytr").Reverse<char>().ToArray<char>();
@@ -75,7 +75,7 @@ Using the `Dream.<Encode>g__fm|3_3` function (fm33 in the code below), we can ma
     
     string dict = "";
     for (int i = 1; i < 256; i++) {
-	    string find = fm33((char)i)+"/";
+	string find = fm33((char)i)+"/";
     	if (text2.Contains(find)) {
     		dict += Convert.ToChar((byte)i) + " is encrypted with " + find + Environment.NewLine;
 		}
