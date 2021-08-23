@@ -19,7 +19,7 @@ Okay, so let's start reversing it. First we take the values of `check`, and do t
     int check[] = {0x5f, 0x40, 0x5a, 0x15, 0x75, 0x45, 0x62, 0x53, 0x75, 0x46, 0x52, 0x43, 0x5f, 0x75, 0x50, 0x52, 0x75, 0x5f, 0x5c, 0x4f};
     for(int i=0;i<sizeof(check)/sizeof(check[0]);i++)
         check[i]^=42;
-After that, we do exactly the same thing as they did while encrypting - find the first prime number coming after `counter*4`, and `Inverse_rot_n` our char for that number. **Inverse_rot_n(index)** is the same as **rot_n(26-index%26)**. ( I just copied the same `rot_n` and `is_prime` functions as ghidra decompiled. )
+After that, we do exactly the same thing as they did while encrypting - find the first prime number coming after `counter*4`, and `Inverse_rot_n` our char for that number. **Inverse_rot_n(index)** is the same as **rot_n(26 - index % 26)**. ( I just copied the same `rot_n` and `is_prime` functions as ghidra decompiled. )
 
 
 
