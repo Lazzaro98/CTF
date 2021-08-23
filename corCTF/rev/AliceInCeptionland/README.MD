@@ -40,12 +40,12 @@ After we killed the evil cat, we move the Alice to the next question mark and st
     {
 	    for (int i = 0; i < 128; i++)//try every printable ASCII value
 	    {
-		    byte num = rol((byte)((uint)(byte)((uint)(byte)((uint)rol((byte)i, (byte)114) + 222U) ^ (uint)Convert.ToByte(str[index % str.Length])) - (uint)sbyte.MaxValue), (byte)6);
-		    if (array[index] == Convert.ToChar(num))//and check if that's the one we need.
-				{
-				    array[index] = Convert.ToChar((byte)i);
-				    break;
-				}
+		byte num = rol((byte)((uint)(byte)((uint)(byte)((uint)rol((byte)i, (byte)114) + 222U) ^ (uint)Convert.ToByte(str[index % str.Length])) - (uint)sbyte.MaxValue), (byte)6);
+		if (array[index] == Convert.ToChar(num))//and check if that's the one we need.
+		{
+			array[index] = Convert.ToChar((byte)i);
+			break;
+		}
 	    }
     }
     for (int index = array.Length - 1; index >= 0; index--)
@@ -75,7 +75,7 @@ Using the `Dream.<Encode>g__fm|3_3` function (fm33 in the code below), we can ma
     
     string dict = "";
     for (int i = 1; i < 256; i++) {
-	string find = fm33((char)i)+"/";
+		string find = fm33((char)i)+"/";
     	if (text2.Contains(find)) {
     		dict += Convert.ToChar((byte)i) + " is encrypted with " + find + Environment.NewLine;
 		}
