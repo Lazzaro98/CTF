@@ -1,5 +1,5 @@
 # babyrev
-We are given binary (uploaded here), which when we run, asks us for input. So, again, our task is to figure out the expected input in order to get the flag. 
+We are given binary (uploaded here), which when we run, asks us for input. So, our task is to figure out the expected input which is also the flag. 
 
 ### Analyzing the binary
 Looking at the decompiled code from ghidra, we see:
