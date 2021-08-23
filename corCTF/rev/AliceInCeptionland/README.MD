@@ -21,7 +21,7 @@ If we move Alice to the first question mark, we are starting the first challenge
 	if (!string.Join<char>("", ((IEnumerable<char>) array).Reverse<char>()).Equals("oI!&}IusoKs ?Ytr"))
             return;
 
-We see here that after our input is XOR-ed with `str`, it needs to be equal to `oI!&}IusoKs ?Ytr`. The WhiteRabbit.Transform(string) just returns string that is passed as argument. So let's do some rev here, and write reversed function in C# :
+We see here that after our input is XOR-ed with `str`, it needs to be equal to `oI!&}IusoKs ?Ytr`. The WhiteRabbit.Transform(string) just returns string that is passed as argument, so we can just ignore it. So let's do some rev here, and write reversed function in C# :
 
     string str = "41!ce1337";
     char[] array = ("oI!&}IusoKs ?Ytr").Reverse<char>().ToArray<char>();
