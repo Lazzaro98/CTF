@@ -55,7 +55,7 @@ Executing the code, we bruteforced the solution for the 2nd stage, which is `\x4
 ##  Deep dream
 In the third stage, we are again given encrpyted string, and using debugger we can see what Encode method looks like. ![Encode method](https://i.ibb.co/VQqwDKB/Screenshot-2021-08-23-041225.png)
 
-Using the `Dream.<Encode>g__fm|3_3` function (fm33 in the code below), we can make a dictionary for all characters. We will do it only for characters that appear in our solution:
+Using the `Dream.<Encode>g__fm|3_3` function (fm33 in the code below), we can make a dictionary for all characters. We will do it only for characters that appear in our solution, so let's write reverse method:
 
 	string text = "3c3cf1df89fe832aefcc22fc82017cd57bef01df54235e21414122d78a9d88cfef3cf10c829ee32ae4ef01dfa1951cd51b7b22fc82433ef7ef418cdf8a9d802101ef64f9a495268fef18d52882324f217b1bd64b82017cd57bef01df255288f7593922712c958029e7efccdf081f8808a6efd5287595f821482822f6cb95f821cceff4695495268fefe72ad7821a67ae0060ad"; // given encrypted string
     byte[] array = new byte[]
