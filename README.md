@@ -1,3 +1,3 @@
 CTF (Capture The Flag) writeups, code snippets, notes, scripts,...
 
-ctftime profile: https://ctftime.org/user/100954
+[🏴‍☠️ CTFtime -> L4z 🏴‍☠️](https://ctftime.org/user/100954)
